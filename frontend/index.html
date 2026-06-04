@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FinGenie AI - Smart Banking</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              clifford: '#da373d',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      @keyframes float {
+        0%, 100% { transform: translateY(0) translateX(0); }
+        50% { transform: translateY(-20px) translateX(20px); }
+      }
+      .animate-glow-1 { animation: float 15s ease-in-out infinite; }
+      .animate-glow-2 { animation: float 18s ease-in-out infinite reverse; }
+      .glass-card {
+        background: rgba(10, 29, 122, 0.2);
+        backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37), 
+                    inset 0 0 20px rgba(79, 125, 255, 0.1);
+      }
+      .neon-glow {
+        box-shadow: 0 0 15px rgba(79, 125, 255, 0.5);
+      }
+      .neon-text {
+        text-shadow: 0 0 10px rgba(79, 125, 255, 0.5);
+      }
+      input::placeholder { color: rgba(147, 197, 253, 0.5); }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
